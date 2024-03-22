@@ -1,4 +1,4 @@
-//1 algoritmo de complejidad cuadrática
+package com.example.analisis_algoritmos;//1 algoritmo de complejidad cuadrática
 
 public class SelectionSort {
     public static void main(String[] args) {

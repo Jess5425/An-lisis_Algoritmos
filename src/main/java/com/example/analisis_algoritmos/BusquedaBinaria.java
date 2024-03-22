@@ -1,3 +1,5 @@
+package com.example.analisis_algoritmos;
+
 //1 algoritmo lineal logarítmico
 public class BusquedaBinaria {
 

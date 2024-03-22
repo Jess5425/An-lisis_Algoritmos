@@ -1,3 +1,4 @@
+package com.example.analisis_algoritmos;
 
 public class PotenciaLogaritmica {
 
