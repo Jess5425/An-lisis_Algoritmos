@@ -1,5 +1,6 @@
-package com.example.analisis_algoritmos;//1 algoritmo de complejidad cuadrática
+package com.example.analisis_algoritmos;
 
+//1 algoritmo de complejidad cuadrática
 public class SelectionSort {
     public static void main(String[] args) {
         int[] array = {64, 25, 12, 22, 11};
@@ -7,10 +8,19 @@ public class SelectionSort {
         System.out.println("Array antes de ordenar:");
         printArray(array);
 
+        // Medición del tiempo de inicio
+        long startTime = System.nanoTime();
+
         selectionSort(array);
+
+        // Medición del tiempo de finalización
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);  // Duración en nanosegundos
 
         System.out.println("\nArray después de ordenar:");
         printArray(array);
+
+        System.out.println("Tiempo de ejecución: " + duration + " nanosegundos");
     }
 
     // Implementación del algoritmo de selección

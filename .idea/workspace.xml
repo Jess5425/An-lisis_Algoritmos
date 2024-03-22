@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="347ed45a-1453-47f0-a653-0f207aa7282c" name="Changes" comment="Código de algoritmo de nanosegundos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exponencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/analisis_algoritmos/Exponencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/analisis_algoritmos/BusquedaBinaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/analisis_algoritmos/BusquedaBinaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/analisis_algoritmos/SumaArreglo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/analisis_algoritmos/SumaArreglo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
