@@ -1,6 +1,6 @@
 package com.example.analisis_algoritmos;
 
-//1 algoritmo lineal logarítmico
+//1 algoritmo  logarítmico
 
 import java.util.Arrays;
 

@@ -1,26 +1,33 @@
 package com.example.analisis_algoritmos;
 
-//1 algoritmo de complejidad cuadrática
+import java.util.Random;
+
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] array = {64, 25, 12, 22, 11};
+        // Tamaños de arreglos a probar
+        int[] tamaños = {1000000};
 
-        System.out.println("Array antes de ordenar:");
-        printArray(array);
+        for (int tamaño : tamaños) {
+            // Generar un nuevo arreglo de tamaño específico con números aleatorios
+            int[] array = generarArregloAleatorio(tamaño);
 
-        // Medición del tiempo de inicio
-        long startTime = System.nanoTime();
+            System.out.println("\nArray antes de ordenar:");
 
-        selectionSort(array);
 
-        // Medición del tiempo de finalización
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime);  // Duración en nanosegundos
+            // Medición del tiempo de inicio
+            long startTime = System.nanoTime();
 
-        System.out.println("\nArray después de ordenar:");
-        printArray(array);
+            selectionSort(array);
 
-        System.out.println("Tiempo de ejecución: " + duration + " nanosegundos");
+            // Medición del tiempo de finalización
+            long endTime = System.nanoTime();
+            long duration = (endTime - startTime);  // Duración en nanosegundos
+
+            System.out.println("\nArray después de ordenar:");
+
+
+            System.out.println("Tiempo de ejecución para el tamaño " + tamaño + ": " + duration + " nanosegundos");
+        }
     }
 
     // Implementación del algoritmo de selección
@@ -50,5 +57,15 @@ public class SelectionSort {
             System.out.print(array[i] + " ");
         }
         System.out.println();
+    }
+
+    // Método para generar un arreglo aleatorio de un tamaño específico
+    public static int[] generarArregloAleatorio(int tamaño) {
+        int[] arreglo = new int[tamaño];
+        Random random = new Random();
+        for (int i = 0; i < tamaño; i++) {
+            arreglo[i] = random.nextInt(100); // Números aleatorios entre 0 y 99
+        }
+        return arreglo;
     }
 }
