@@ -1,3 +1,5 @@
+package com.example.analisis_algoritmos;
+
 public class Exponencial {
 
     public static int calcularExponencial(int base, int exponente) {

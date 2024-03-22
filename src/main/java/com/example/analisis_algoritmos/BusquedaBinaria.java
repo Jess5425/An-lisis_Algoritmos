@@ -1,6 +1,9 @@
 package com.example.analisis_algoritmos;
 
 //1 algoritmo lineal logarítmico
+
+import java.util.Arrays;
+
 public class BusquedaBinaria {
 
     // Función para buscar un elemento en un arreglo ordenado de enteros
@@ -28,14 +31,39 @@ public class BusquedaBinaria {
         return -1;
     }
 
-    // Función de prueba
+    // Función para generar un arreglo ordenado de enteros aleatorios
+    public static int[] generarArregloOrdenado(int tamaño) {
+        int[] arreglo = new int[tamaño];
+        for (int i = 0; i < tamaño; i++) {
+            arreglo[i] = i; // Asigna valores ordenados al arreglo
+        }
+        return arreglo;
+    }
+
+    // Función de prueba para medir el tiempo de búsqueda
     public static void main(String[] args) {
-        int[] arreglo = { 2, 3, 4, 10, 40 };
-        int elementoABuscar = 10;
-        int resultado = busquedaBinaria(arreglo, elementoABuscar);
-        if (resultado != -1)
-            System.out.println("El elemento " + elementoABuscar + " está presente en el índice " + resultado);
-        else
-            System.out.println("El elemento " + elementoABuscar + " no está presente en el arreglo.");
+        // Tamaños de arreglo a probar
+        int[] tamaños = {1000, 10000, 100000, 1000000};
+
+        // Realizar la prueba para cada tamaño de arreglo
+        for (int tamaño : tamaños) {
+            // Generar un nuevo arreglo de tamaño específico
+            int[] arreglo = generarArregloOrdenado(tamaño);
+
+            // Elemento a buscar (en este caso, el último elemento)
+            int elementoABuscar = tamaño - 1;
+
+            // Medir el tiempo de búsqueda
+            long startTime = System.nanoTime();
+            int resultado = busquedaBinaria(arreglo, elementoABuscar);
+            long endTime = System.nanoTime();
+            long tiempoDeBusqueda = endTime - startTime;
+
+            // Imprimir el resultado y el tiempo de búsqueda
+            if (resultado != -1)
+                System.out.println("Tamaño del arreglo: " + tamaño + ", Elemento " + elementoABuscar + " encontrado en el índice " + resultado + ", Tiempo de búsqueda: " + tiempoDeBusqueda + " nanosegundos");
+            else
+                System.out.println("Tamaño del arreglo: " + tamaño + ", Elemento " + elementoABuscar + " no encontrado, Tiempo de búsqueda: " + tiempoDeBusqueda + " nanosegundos");
+        }
     }
 }
